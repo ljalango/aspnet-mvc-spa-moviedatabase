@@ -1,3 +1,21 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = "";
 }
+<html>
+<body ng-app="moviesApp">
+    <p>M O V I E A P P</p><br />
+    <movieapp-component></movieapp-component>
+    <p>M O V I E A P P</p>
+
+    <script src="~/lib/angular/angular.js"></script>
+    <script src="~/lib/angular-route/angular-route.js"></script>
+
+    <script src="~/app/app.js"></script>
+    <script src="~/app/movieappComponent.js"></script>
+
+    <script src="~/app/controllers.js"></script>
+    <script src="~/app/movieList.js"></script>
+    <script src="~/app/movieDetail.js"></script>
+    <script src="~/app/routing.js"></script>
+</body>
+</html>
