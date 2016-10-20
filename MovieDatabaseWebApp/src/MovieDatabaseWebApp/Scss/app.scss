@@ -1,5 +1,62 @@
 ﻿@charset 'utf-8';
-
 @import 'foundation';
 
-@include foundation-global-styles;
+@include foundation-everything;
+
+$text-color: #000000;
+$heading-text-color: #5f98be;
+$base-font-family : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$step-size-heading: 0.33333;
+
+@mixin heading-size($size) {
+    font-size: $size * $step-size-heading + em;
+}
+
+@mixin margin-left-right() {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+body {
+  color: $text-color;
+  font-family: $base-font-family;
+  line-height: 1.6;
+}
+
+.movie-detail {
+    @include margin-left-right();
+}
+
+.row { background-color: #898d61; }
+
+h1 {
+    @include heading-size(6);
+    @include margin-left-right();
+    color: $heading-text-color;
+    background-color: #5F9EA0;
+}
+h2 {
+    @include heading-size(5);
+    @include margin-left-right();
+    color: $heading-text-color;
+}
+h3 {
+    @include heading-size(4);
+    @include margin-left-right();
+    color: $heading-text-color;
+}
+h4 {
+    @include heading-size(3);
+    @include margin-left-right();
+    color: $heading-text-color;
+}
+h5 {
+    @include heading-size(2);
+    @include margin-left-right();
+    color: $heading-text-color;
+}
+h6 {
+    @include heading-size(1);
+    @include margin-left-right();
+    color: $heading-text-color;
+}

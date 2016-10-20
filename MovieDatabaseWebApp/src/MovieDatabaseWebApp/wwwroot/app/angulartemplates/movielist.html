@@ -1,14 +1,15 @@
 ﻿
-<h2>...Movie List...</h2>
-<p>Currently there is a small collection, but it will be growing every day</p><br />
-<movie-detail >
-    <div>
-        <ul>
-            <li><a href="#!/moviedetail/:2">Details</a></li>
-            <li><a href="#!/about">About</a></li>
-        </ul>
+<h3>Movie Collection</h3>
+
+<!-- TODO filter -->
+<div ng-controller="MovieController">
+    <div class="row" ng-repeat="movie in movies">
+        <div class="small-2 columns">{{movie.title}}</div>
+        <div class="small-2 columns">{{movie.year}}</div>
+        <div class="small-2 columns">
+            <a href="#!/moviedetail/:{{movie.Id}}">Details</a>
+        </div>
     </div>
-    <div ng-view>
-    </div>
-    
-</movie-detail>
+</div>
+
+<script src="~/app/routing.js"></script>

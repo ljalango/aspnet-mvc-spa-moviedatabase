@@ -6,16 +6,19 @@
           requireBase: false
       }).hashPrefix('!');
       $routeProvider
+       .when('/', {
+           templateUrl: '/app/angulartemplates/movies.html',
+           controller: 'MoviesViewController'
+       })
       .when('/moviedetail/:movieId', {
           templateUrl: '/app/angulartemplates/moviedetail.html',
           controller: 'MovieDetailController'
       })
-      .when('/about', {
-          templateUrl: '/app/angulartemplates/about.html',
-          controller: 'AboutController'
+      .when('/close', {
+          templateUrl: '/app/angulartemplates/movies.html',
+          controller: 'MoviesViewController'
       })
       .otherwise({
           templateUrl: '/app/angulartemplates/movies.html',
-          controller: 'MovieAppController'
       })
   }]);
