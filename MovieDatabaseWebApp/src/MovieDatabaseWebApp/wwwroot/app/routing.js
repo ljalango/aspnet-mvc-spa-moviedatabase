@@ -20,5 +20,6 @@
       })
       .otherwise({
           templateUrl: '/app/angulartemplates/movies.html',
+          controller: 'MoviesViewController'
       })
   }]);
