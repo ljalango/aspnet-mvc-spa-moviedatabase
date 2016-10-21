@@ -4,7 +4,7 @@
 @include foundation-everything;
 
 $text-color: #000000;
-$heading-text-color: #5f98be;
+$heading-text-color: #c3bbbb;
 $base-font-family : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 $step-size-heading: 0.33333;
 
@@ -12,9 +12,12 @@ $step-size-heading: 0.33333;
     font-size: $size * $step-size-heading + em;
 }
 
-@mixin margin-left-right() {
-    margin-left: 20px;
+@mixin margins-paddings() {
+    margin-left: 26px;
     margin-right: 20px;
+    padding-left: 40px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 body {
@@ -24,39 +27,64 @@ body {
 }
 
 .movie-detail {
-    @include margin-left-right();
+    @include margins-paddings();
+    margin-top: 30px;
 }
 
-.row { background-color: #898d61; }
+.row { background-color: #99c2dd }
+
+.movie-search-row { 
+    padding: 4px;
+    background-color: #99c2dd;
+    height: 20px;
+}
+
+.movie-list-headings {
+    background-color: #d0c68d;
+    color: skyblue;
+}
+
+.movie-list-row { background-color: #898d61; }
+.movie-filter-row { background-color: #d0c68d }
+.app-header-row { background-color: #ffffff } 
 
 h1 {
     @include heading-size(6);
-    @include margin-left-right();
+    @include margins-paddings();
     color: $heading-text-color;
-    background-color: #5F9EA0;
+    background-color: #a1d7d3;
 }
 h2 {
     @include heading-size(5);
-    @include margin-left-right();
+    @include margins-paddings();
     color: $heading-text-color;
 }
 h3 {
     @include heading-size(4);
-    @include margin-left-right();
+    @include margins-paddings();
     color: $heading-text-color;
 }
 h4 {
     @include heading-size(3);
-    @include margin-left-right();
+    @include margins-paddings();
     color: $heading-text-color;
 }
 h5 {
     @include heading-size(2);
-    @include margin-left-right();
+    @include margins-paddings();
     color: $heading-text-color;
 }
 h6 {
     @include heading-size(1);
-    @include margin-left-right();
+    @include margins-paddings();
     color: $heading-text-color;
+}
+
+#header_gradient {
+    height: 60px;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red, yellow); /* Standard syntax */
 }

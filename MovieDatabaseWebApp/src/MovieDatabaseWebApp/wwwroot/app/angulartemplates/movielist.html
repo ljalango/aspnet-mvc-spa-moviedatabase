@@ -1,15 +1,34 @@
 ﻿
-<h3>Movie Collection</h3>
-
-<!-- TODO filter -->
 <div ng-controller="MovieController">
-    <div class="row" ng-repeat="movie in movies">
-        <div class="small-2 columns">{{movie.title}}</div>
-        <div class="small-2 columns">{{movie.year}}</div>
+    <div class="row movie-filter-row">
         <div class="small-2 columns">
-            <a href="#!/moviedetail/:{{movie.Id}}">Details</a>
+            <label>
+                Filter movies by genre
+                <select ng-model="genre">
+                    <option value="ALL">ALL</option>
+                    <option value="ACTION">ACTION</option>
+                    <option value="SCI-FI">SCI-FI</option>
+                    <option value="COMEDY">COMEDY</option>
+                    <option value="WESTERN">WESTERN</option>
+                    <option value="HORROR">HORROR</option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="row movie-list-headings">
+        <div class="medium-4 columns">Title</div>
+        <div class="small-2 columns">Genre</div>
+        <div class="small-2 columns">Year</div>
+        <div class="small-2 columns">Rating</div>
+        <div class="small-2 columns"></div>
+    </div>
+    <div class="row movie-list-row" ng-repeat="movie in movies | genre_filter:genre" movie="movie">
+        <div class="medium-4 columns">{{movie.title}}</div>
+        <div class="small-2 columns">{{movie.genre}}</div>
+        <div class="small-2 columns">{{movie.year}}</div>
+        <div class="small-2 columns">{{movie.rating}}</div>
+        <div class="small-2 columns">
+            <a href="#!/moviedetail/{{movie.id}}">Details</a>
         </div>
     </div>
 </div>
-
-<script src="~/app/routing.js"></script>

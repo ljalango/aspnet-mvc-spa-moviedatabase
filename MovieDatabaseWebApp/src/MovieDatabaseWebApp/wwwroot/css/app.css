@@ -3443,45 +3443,98 @@ body {
   line-height: 1.6; }
 
 .movie-detail {
-  margin-left: 20px;
-  margin-right: 20px; }
+  margin-left: 26px;
+  margin-right: 20px;
+  padding-left: 40px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top: 30px; }
 
 .row {
+  background-color: #99c2dd; }
+
+.movie-search-row {
+  padding: 4px;
+  background-color: #99c2dd;
+  height: 20px; }
+
+.movie-list-headings {
+  background-color: #d0c68d;
+  color: skyblue; }
+
+.movie-list-row {
   background-color: #898d61; }
+
+.movie-filter-row {
+  background-color: #d0c68d; }
+
+.app-header-row {
+  background-color: #ffffff; }
 
 h1 {
   font-size: 1.99998em;
-  margin-left: 20px;
+  margin-left: 26px;
   margin-right: 20px;
-  color: #5f98be;
-  background-color: #5F9EA0; }
+  padding-left: 40px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #c3bbbb;
+  background-color: #a1d7d3; }
 
 h2 {
   font-size: 1.66665em;
-  margin-left: 20px;
+  margin-left: 26px;
   margin-right: 20px;
-  color: #5f98be; }
+  padding-left: 40px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #c3bbbb; }
 
 h3 {
   font-size: 1.33332em;
-  margin-left: 20px;
+  margin-left: 26px;
   margin-right: 20px;
-  color: #5f98be; }
+  padding-left: 40px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #c3bbbb; }
 
 h4 {
   font-size: 0.99999em;
-  margin-left: 20px;
+  margin-left: 26px;
   margin-right: 20px;
-  color: #5f98be; }
+  padding-left: 40px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #c3bbbb; }
 
 h5 {
   font-size: 0.66666em;
-  margin-left: 20px;
+  margin-left: 26px;
   margin-right: 20px;
-  color: #5f98be; }
+  padding-left: 40px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #c3bbbb; }
 
 h6 {
   font-size: 0.33333em;
-  margin-left: 20px;
+  margin-left: 26px;
   margin-right: 20px;
-  color: #5f98be; }
+  padding-left: 40px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #c3bbbb; }
+
+#header_gradient {
+  height: 60px;
+  background: red;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(red, yellow);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(red, yellow);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(red, yellow);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(red, yellow);
+  /* Standard syntax */ }

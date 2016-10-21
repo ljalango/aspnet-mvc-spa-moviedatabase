@@ -9,15 +9,20 @@ using MovieDatabaseWebApp.Models;
 
 namespace MovieDatabaseWebApp.Controllers
 {
-    //[Route("api/[controller]")]
     public class MoviesController : Controller
     {
-        [Route("api/movies")]
+        [Route("/api/movies")]
         public JsonResult GetMovies()
         {
             MoviesModel model = new MoviesModel();
-            model.Genres = model.GetGenres();
-            return Json(model.GetMovies());
+            return Json(model.Movies);
+        }
+
+        [Route("/api/movie")]
+        public JsonResult GetMovieById(int movieId)
+        {
+            MoviesModel model = new MoviesModel();
+            return Json(model.GetMovieById(movieId));
         }
     }
 }
