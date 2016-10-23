@@ -11,18 +11,32 @@ namespace MovieDatabaseWebApp.Controllers
 {
     public class MoviesController : Controller
     {
+        private IMovieService movieService;
+
+        public MoviesController()
+        {
+            this.movieService = new  MovieService(new MovieRepository());
+        }
+
+        //returns list of movies in JSON using movie service class
         [Route("/api/movies")]
         public JsonResult GetMovies()
         {
-            MoviesModel model = new MoviesModel();
-            return Json(model.Movies);
+            return Json(movieService.GetMovies());
         }
 
-        [Route("/api/movie")]
-        public JsonResult GetMovieById(int movieId)
+        [Route("/api/details")]
+        //returns movie details in JSON using movie service class
+        public JsonResult GetMovieDetails(int movieId)
         {
-            MoviesModel model = new MoviesModel();
-            return Json(model.GetMovieById(movieId));
+            return Json(movieService.GetMovieDetails(movieId));
+        }
+
+        [Route("/api/search")]
+        //returns list of movies in JSON using movie service class
+        public JsonResult FindMovies(string keyword)
+        {
+            return Json(movieService.GetMoviesByKeyword(keyword));
         }
     }
 }

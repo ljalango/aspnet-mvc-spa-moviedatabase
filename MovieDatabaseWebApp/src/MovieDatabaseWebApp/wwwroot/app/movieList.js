@@ -6,7 +6,6 @@
     }).error(function (error) {
         console.log("error getMovies service"); 
     });
-
 };
 
 angular.module('moviesApp').component('movieList', {

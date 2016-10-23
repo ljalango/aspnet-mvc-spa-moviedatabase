@@ -4,9 +4,19 @@
 
 <html>
 <head>
+    <link rel="stylesheet" href="css/app.css">
 
-<link rel="stylesheet" href="css/app.css">
+    <script src="~/lib/angular/angular.js"></script>
+    <script src="~/lib/angular-route/angular-route.js"></script>
 
+    <script src="~/app/app.js"></script>
+    <script src="~/app/moviesViewController.js"></script>
+    <script src="~/app/searchComponent.js"></script>
+    <script src="~/app/searchResultsController.js"></script>
+    <script src="~/app/movieController.js"></script>
+    <script src="~/app/movieList.js"></script>
+    <script src="~/app/movieDetail.js"></script>
+    <script src="~/app/routing.js"></script>
 </head>
 
     <body ng-app="moviesApp">
@@ -23,16 +33,5 @@
         
         <ng-view></ng-view>
 
-        <script src="~/lib/angular/angular.js"></script>
-        <script src="~/lib/angular-route/angular-route.js"></script>
-
-        <script src="~/app/app.js"></script>
-        <script src="~/app/moviesViewController.js"></script>
-        <script src="~/app/searchComponent.js"></script>
-        <script src="~/app/searchResultsController.js"></script>
-        <script src="~/app/movieController.js"></script>
-        <script src="~/app/movieList.js"></script>
-        <script src="~/app/movieDetail.js"></script>
-        <script src="~/app/routing.js"></script>
 </body>
 </html>

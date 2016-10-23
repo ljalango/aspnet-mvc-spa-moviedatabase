@@ -8,6 +8,21 @@ moviesApp.factory(serviceId,
 function moviesFactory($http) {
     var service = {};
 
+    function getMovies() {
+        return $http.get('/api/movies');
+    }
+
+    function getMovieDetails(id) {
+
+        var request = $http({
+            url: '/api/details',
+            method: "GET",
+            params: { movieId: id }
+        });
+
+        return request;
+    }
+
     function getMovieById(id) {
 
         var request = $http({
@@ -19,13 +34,9 @@ function moviesFactory($http) {
         return request;
     }
 
-    function getMovies() {
-        return $http.get('/api/movies');
-    }
-
     var service = {
-        getMovieById: getMovieById,
-        getMovies: getMovies
+        getMovies: getMovies,
+        getMovieDetails: getMovieDetails
     };
 
     return service;
@@ -34,6 +45,8 @@ function moviesFactory($http) {
 moviesApp.filter('genre_filter', function () {
         return function (items, genre) {
             //get movies by genre
+
+
             return items;
         };
     }
