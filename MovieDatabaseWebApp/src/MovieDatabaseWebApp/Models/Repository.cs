@@ -32,7 +32,12 @@ namespace MovieDatabaseWebApp.Models
                 new Movie(55, "Fifty Shades of Grey", (int)Genre.horror, 2016, 3, "Literature student Anastasia Steele's life changes forever when she meets handsome, yet tormented, billionaire Christian Grey."),
                 new Movie(5, "Extinction", (int)Genre.thriller, 2015, 7, "And suddenly, overnight, the world came to a halt. Two men, two survivors, one kid, and hatred that separates them. A place forgotten by everyone, including the creatures that inhabit the Earth... until now"),
                 new Movie(6, "Terminus", (int)Genre.scifi, 2015, 9, "Following a near-fatal accident, David Chamberlain makes an unprecedented discovery that will not only determine the fate of his family, but of mankind."),
-                new Movie(22, "Sky", (int)Genre.drama, 2015, 8, "Romy (Diane Kruger) is on holiday in the USA with her French husband, Richard (Gilles Lellouche). But the journey quickly turns into a settling of old scores for this worn out couple. After an ultimate fight, Romy decides to break free. She cuts off her ties to a stable and secure life that has become alienating and escapes to the unknown")
+                new Movie(22, "Sky", (int)Genre.drama, 2015, 8, "Romy (Diane Kruger) is on holiday in the USA with her French husband, Richard (Gilles Lellouche). But the journey quickly turns into a settling of old scores for this worn out couple. After an ultimate fight, Romy decides to break free. She cuts off her ties to a stable and secure life that has become alienating and escapes to the unknown"),
+                new Movie(23, "Vacation", (int)Genre.comedy, 2015, 6, "Rusty Griswold takes his own family on a road trip to 'Walley World' in order to spice things up with his wife and reconnect with his sons."),
+                new Movie(234, "Journey to the Edge of the Universe", (int)Genre.documentary, 2008, 9, "Voyage on images taken from the Hubble telescope. Explore the science and history behind the distant celestial bodies in the solar system. Narrated by Alec Baldwin"),
+                new Movie(25, "Dinosaur", (int)Genre.animation, 2000, 7, "An orphaned dinosaur raised by lemurs joins an arduous trek to a sancturary after a meteorite shower destroys his family home."),
+                new Movie(26, "Sleepy Hollow", (int)Genre.horror, 1999, 8, "Ichabod Crane is sent to Sleepy Hollow to investigate the decapitations of 3 people with the culprit being the legendary apparition, the Headless Horseman."),
+                new Movie(271, "Renegade", (int)Genre.western, 2004, 8, "Alledged wayward adolescent Louisiana gentleman Michael 'Mike' Blueberry is dumped by his family with a Wild West uncle. ")
             };
             this.Genres = new List<Category>()
             {
@@ -42,10 +47,12 @@ namespace MovieDatabaseWebApp.Models
                 new Category { ID = (int)Genre.scifi, Name = "SCI-FI" },
                 new Category { ID = (int)Genre.comedy, Name = "COMEDY" },
                 new Category { ID = (int)Genre.western, Name = "WESTERN" },
-                new Category { ID = (int)Genre.western, Name = "HORROR" },
+                new Category { ID = (int)Genre.horror, Name = "HORROR" },
                 new Category { ID = (int)Genre.thriller, Name = "THRILLER" },
                 new Category { ID = (int)Genre.adventure, Name = "ADVENTURE" },
-                new Category { ID = (int)Genre.crime, Name = "CRIME" }
+                new Category { ID = (int)Genre.crime, Name = "CRIME" },
+                new Category { ID = (int)Genre.documentary, Name = "DOCUMENTARY" },
+                new Category { ID = (int)Genre.animation, Name = "ANIMATION" }
             };
         }
 
@@ -69,7 +76,7 @@ namespace MovieDatabaseWebApp.Models
 
         enum Genre
         {
-            all, action, drama, scifi, comedy, western, horror, thriller, adventure, crime
+            all, action, drama, scifi, comedy, western, horror, thriller, adventure, crime, documentary, animation
         }
     }
 }

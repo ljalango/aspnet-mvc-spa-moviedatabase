@@ -11,9 +11,6 @@
 
     <script src="~/app/app.js"></script>
     <script src="~/app/moviesViewController.js"></script>
-    <script src="~/app/searchComponent.js"></script>
-    <script src="~/app/searchResultsController.js"></script>
-    <script src="~/app/movieController.js"></script>
     <script src="~/app/movieList.js"></script>
     <script src="~/app/movieDetail.js"></script>
     <script src="~/app/routing.js"></script>
@@ -21,17 +18,7 @@
 
     <body ng-app="moviesApp">
 
-        <div class="row">
-            <div class="medium-5 columns"><h1>MDB</h1></div>
-            <div class="small-6 columns">
-                <search-component></search-component>
-            </div>
-        </div>
-        <div class="row">
-            <div class="small-10 columns"><h3>A small ASP.NET movie database</h3></div>
-        </div>
-        
         <ng-view></ng-view>
 
-</body>
+    </body>
 </html>

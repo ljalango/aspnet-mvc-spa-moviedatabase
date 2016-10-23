@@ -31,14 +31,7 @@ namespace MovieDatabaseWebApp.Controllers
         {
             return Json(movieService.GetMovieDetails(movieId));
         }
-
-        [Route("/api/search")]
-        //returns list of movies in JSON using movie service class
-        public JsonResult FindMovies(string keyword)
-        {
-            return Json(movieService.GetMoviesByKeyword(keyword));
-        }
-
+        
         [Route("/api/genres")]
         public JsonResult GetGenres()
         {

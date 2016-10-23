@@ -1,10 +1,28 @@
 ﻿
-<div ng-controller="MovieController">
+<div>
+    <div class="row">
+        <div class="medium-5 columns"><h1>MDB</h1></div>
+        <div class="small-6 columns">
+            <form>
+                <div class="row collapse movie-search-row">
+                    <div class="large-8 columns">
+                        <input type="text" placeholder="Find movies" ng-model="keyword">
+                    </div>
+                    <div class="small-2 columns">
+                        <a href="#!/" class="alert button expand">Search</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-10 columns"><h3>A small ASP.NET movie database</h3></div>
+    </div>
     <div class="row movie-filter-row">
         <div class="small-2 columns">
             <label>
                 Filter movies by genre:
-                <select size="4" name="genreselect" ng-model="genreData.model" multiple>
+                <select size="4" name="genreselect" ng-model="genreData.model" class="select" multiple>
                     <option ng-repeat="option in genreData.genres" ng-value="option.id">{{option.name}}</option>
                 </select>
             </label>
@@ -17,7 +35,7 @@
         <div class="small-2 columns">Rating</div>
         <div class="small-2 columns"></div>
     </div>
-    <div class="row movie-list-row" ng-repeat="movie in movies | genre_filter:genreData.model">
+    <div class="row movie-list-row" ng-repeat="movie in movies | genre_filter:genreData.model | search_filter:keyword">
         <div class="medium-4 columns">{{movie.title}}</div>
         <div class="small-2 columns">{{movie.genre}}</div>
         <div class="small-2 columns">{{movie.year}}</div>

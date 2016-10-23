@@ -9,7 +9,6 @@ namespace MovieDatabaseWebApp.Models
     {
         MovieList GetMovies();
         object GetMovieDetails(int movieId);
-        object GetMoviesByKeyword(string keyword);
         List<Category> GetGenres();
     }
 
@@ -37,12 +36,6 @@ namespace MovieDatabaseWebApp.Models
                         where item.ID == movieId
                         select item;
             return queryResult.Single();
-        }
-
-        public object GetMoviesByKeyword(string keyword)
-        {
-            var queryResults = movieRepository.AllMovies().Where(mov => mov.Title.Equals(keyword)).ToList();
-            return queryResults;
         }
 
         public List<Category> GetGenres()

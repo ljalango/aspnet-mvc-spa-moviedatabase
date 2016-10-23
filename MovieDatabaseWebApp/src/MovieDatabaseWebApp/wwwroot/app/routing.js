@@ -15,7 +15,7 @@
           controller: 'MovieDetailController'
       })
       .when('/search', {
-          templateUrl: '/app/angulartemplates/search_results.html',
+          templateUrl: '/app/angulartemplates/movies.html',
           controller: 'SearchResultsController'
       })
       .when('/close', {
