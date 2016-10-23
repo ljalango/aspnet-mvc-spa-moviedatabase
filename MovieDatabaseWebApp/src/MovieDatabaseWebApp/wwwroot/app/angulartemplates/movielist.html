@@ -3,14 +3,7 @@
     <div class="row movie-filter-row">
         <div class="small-2 columns">
             <label>
-                Filter movies by genre
-                <select ng-model="genre">
-                    <option value="ALL">ALL</option>
-                    <option value="ACTION">ACTION</option>
-                    <option value="SCI-FI">SCI-FI</option>
-                    <option value="COMEDY">COMEDY</option>
-                    <option value="WESTERN">WESTERN</option>
-                    <option value="HORROR">HORROR</option>
+                    <option ng-repeat="option in genreData.genres" ng-value="option.id">{{option.name}}</option>
                 </select>
             </label>
         </div>
@@ -22,7 +15,6 @@
         <div class="small-2 columns">Rating</div>
         <div class="small-2 columns"></div>
     </div>
-    <div class="row movie-list-row" ng-repeat="movie in movies | genre_filter:genre" movie="movie">
         <div class="medium-4 columns">{{movie.title}}</div>
         <div class="small-2 columns">{{movie.genre}}</div>
         <div class="small-2 columns">{{movie.year}}</div>

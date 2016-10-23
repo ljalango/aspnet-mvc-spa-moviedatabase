@@ -9,11 +9,13 @@ namespace MovieDatabaseWebApp.Models
     {
         MovieList AllMovies();
         Movie GetMovieById(int movieId);
+        List<Category> AllGenres();
     } 
 
     public class MovieRepository: IMovieRepository
     {
         private MovieList Movies;
+        private List<Category> Genres;
 
         public MovieRepository()
         {
@@ -32,6 +34,19 @@ namespace MovieDatabaseWebApp.Models
                 new Movie(6, "Terminus", (int)Genre.scifi, 2015, 9, "Following a near-fatal accident, David Chamberlain makes an unprecedented discovery that will not only determine the fate of his family, but of mankind."),
                 new Movie(22, "Sky", (int)Genre.drama, 2015, 8, "Romy (Diane Kruger) is on holiday in the USA with her French husband, Richard (Gilles Lellouche). But the journey quickly turns into a settling of old scores for this worn out couple. After an ultimate fight, Romy decides to break free. She cuts off her ties to a stable and secure life that has become alienating and escapes to the unknown")
             };
+            this.Genres = new List<Category>()
+            {
+                new Category { ID = (int)Genre.all, Name = "ALL" },
+                new Category { ID = (int)Genre.action, Name = "ACTION" },
+                new Category { ID = (int)Genre.drama, Name = "DRAMA" },
+                new Category { ID = (int)Genre.scifi, Name = "SCI-FI" },
+                new Category { ID = (int)Genre.comedy, Name = "COMEDY" },
+                new Category { ID = (int)Genre.western, Name = "WESTERN" },
+                new Category { ID = (int)Genre.western, Name = "HORROR" },
+                new Category { ID = (int)Genre.thriller, Name = "THRILLER" },
+                new Category { ID = (int)Genre.adventure, Name = "ADVENTURE" },
+                new Category { ID = (int)Genre.crime, Name = "CRIME" }
+            };
         }
 
         //return movie by id (from the hard coded list)
@@ -47,26 +62,14 @@ namespace MovieDatabaseWebApp.Models
             return this.Movies;
         }
 
-        public static IEnumerable<Category> AllGenres()
+        public List<Category> AllGenres()
         {
-            var genres = new List<Category>()
-            {
-                new Category { ID = (int)Genre.action, Name = "action" },
-                new Category { ID = (int)Genre.drama, Name = "drama" },
-                new Category { ID = (int)Genre.scifi, Name = "sci-fi" },
-                new Category { ID = (int)Genre.comedy, Name = "comedy" },
-                new Category { ID = (int)Genre.western, Name = "western" },
-                new Category { ID = (int)Genre.western, Name = "horror" },
-                new Category { ID = (int)Genre.thriller, Name = "thriller" },
-                new Category { ID = (int)Genre.adventure, Name = "adventure" },
-                new Category { ID = (int)Genre.crime, Name = "crime" }
-            };
-            return genres;
+            return this.Genres;
         }
 
         enum Genre
         {
-            action, drama, scifi, comedy, western, horror, thriller, adventure, crime
+            all, action, drama, scifi, comedy, western, horror, thriller, adventure, crime
         }
     }
 }

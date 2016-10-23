@@ -10,6 +10,7 @@ namespace MovieDatabaseWebApp.Models
         MovieList GetMovies();
         object GetMovieDetails(int movieId);
         object GetMoviesByKeyword(string keyword);
+        List<Category> GetGenres();
     }
 
     public class MovieService : IMovieService
@@ -42,6 +43,11 @@ namespace MovieDatabaseWebApp.Models
         {
             var queryResults = movieRepository.AllMovies().Where(mov => mov.Title.Equals(keyword)).ToList();
             return queryResults;
+        }
+
+        public List<Category> GetGenres()
+        {
+            return this.movieRepository.AllGenres();
         }
 
     }

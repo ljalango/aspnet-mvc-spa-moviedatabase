@@ -38,5 +38,11 @@ namespace MovieDatabaseWebApp.Controllers
         {
             return Json(movieService.GetMoviesByKeyword(keyword));
         }
+
+        [Route("/api/genres")]
+        public JsonResult GetGenres()
+        {
+            return Json(movieService.GetGenres());
+        }
     }
 }

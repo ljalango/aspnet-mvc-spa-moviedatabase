@@ -34,17 +34,22 @@ function moviesFactory($http) {
         return request;
     }
 
+    function getGenres() {
+        return $http.get('/api/genres');
+    }
+
     var service = {
         getMovies: getMovies,
-        getMovieDetails: getMovieDetails
+        getMovieDetails: getMovieDetails,
+        getGenres: getGenres
     };
 
     return service;
 }
 
 moviesApp.filter('genre_filter', function () {
-        return function (items, genre) {
-            //get movies by genre
+        return function (items, selected_genres) {
+            //get movies by genres
 
 
             return items;
