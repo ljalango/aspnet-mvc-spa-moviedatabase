@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using Microsoft.AspNetCore.Mvc;
 using MovieDatabaseWebApp.Models;
 
@@ -25,13 +22,14 @@ namespace MovieDatabaseWebApp.Controllers
             return Json(movieService.GetMovies());
         }
 
-        [Route("/api/details")]
         //returns movie details in JSON using movie service class
+        [Route("/api/details")]
         public JsonResult GetMovieDetails(int movieId)
         {
             return Json(movieService.GetMovieDetails(movieId));
         }
-        
+
+        //returns movie category list
         [Route("/api/genres")]
         public JsonResult GetGenres()
         {

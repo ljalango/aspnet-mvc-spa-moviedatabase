@@ -48,6 +48,8 @@ body {
 .movie-filter-row { background-color: #d0c68d }
 .app-header-row { background-color: #ffffff } 
 
+.autocomplete-list { background-color: #b5b57c }
+
 h1 {
     @include heading-size(6);
     @include margins-paddings();

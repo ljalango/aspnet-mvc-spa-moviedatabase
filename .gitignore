@@ -241,3 +241,4 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 /MovieDatabaseWebApp/src/MovieDatabaseWebApp/wwwroot/lib
+MovieDatabaseWebApp/MovieDatabaseWebApp.UnitTests/package.json

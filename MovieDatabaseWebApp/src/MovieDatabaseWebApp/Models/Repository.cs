@@ -37,7 +37,12 @@ namespace MovieDatabaseWebApp.Models
                 new Movie(234, "Journey to the Edge of the Universe", (int)Genre.documentary, 2008, 9, "Voyage on images taken from the Hubble telescope. Explore the science and history behind the distant celestial bodies in the solar system. Narrated by Alec Baldwin"),
                 new Movie(25, "Dinosaur", (int)Genre.animation, 2000, 7, "An orphaned dinosaur raised by lemurs joins an arduous trek to a sancturary after a meteorite shower destroys his family home."),
                 new Movie(26, "Sleepy Hollow", (int)Genre.horror, 1999, 8, "Ichabod Crane is sent to Sleepy Hollow to investigate the decapitations of 3 people with the culprit being the legendary apparition, the Headless Horseman."),
-                new Movie(271, "Renegade", (int)Genre.western, 2004, 8, "Alledged wayward adolescent Louisiana gentleman Michael 'Mike' Blueberry is dumped by his family with a Wild West uncle. ")
+                new Movie(271, "Renegade", (int)Genre.western, 2004, 8, "Alledged wayward adolescent Louisiana gentleman Michael 'Mike' Blueberry is dumped by his family with a Wild West uncle. "),
+                new Movie(28, "Star Wars: Episode IV - A New Hope", (int)Genre.scifi, 1977, 8, "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a wookiee and two droids to save the galaxy from the Empire's world-destroying battle-station, while also attempting to rescue Princess Leia from the evil Darth Vader."),
+                new Movie(29, "Doctor Strange", (int)Genre.adventure, 2016, 7, "A former neurosurgeon embarks on a journey of healing only to be drawn into the world of the mystic arts."),
+                new Movie(30, "Strange Days", (int)Genre.drama, 1995, 7, "A former cop turned street-hustler accidentally uncovers a conspiracy in Los Angeles in 1999."),
+                new Movie(31, "Rogue One: A Star Wars Story", (int)Genre.scifi, 2016, 7, "The Rebellion makes a risky move to steal the plans to the Death Star, setting up the epic saga to follow."),
+                new Movie(32, "Street", (int)Genre.drama, 2015, 4, "Remo Street is a young fighter who comes from a world where nothing is easy, so when he is faced with the opportunity to train with a world class coach, he has to choose between the long hard road to honor and glory, or succumbing to a brutal future as a cage fighter for the Russian Mafia.")
             };
             this.Genres = new List<Category>()
             {

@@ -34,13 +34,5 @@ namespace MovieDatabaseWebApp.Models
         public int year { get; set; }
         public int rating { get; set; }
         public string description { get; set; }
-
-        public MovieDetails(string title, int year, int rating, string description)
-        {
-            this.title = title;
-            this.year = year;
-            this.rating = rating;
-            this.description = description;
-        }
     }
 }

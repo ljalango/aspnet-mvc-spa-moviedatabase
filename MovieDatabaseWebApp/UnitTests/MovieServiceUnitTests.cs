@@ -1,9 +1,8 @@
 ﻿
-using MovieDatabaseWebApp.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MovieDatabaseWebApp.Models;
 
-
-namespace MovieDatabaseWebApp.UnitTests
+namespace UnitTests
 {
     [TestClass]
     public class MovieServiceUnitTests
@@ -22,8 +21,8 @@ namespace MovieDatabaseWebApp.UnitTests
         {
             MovieService service = new MovieService(new MovieRepository());
 
-            MovieDetails details = service.GetMovieDetails(0);
-            Assert.AreNotEqual(0, service.GetMovieDetails());
+            MovieDetails details = service.GetMovieDetails(271);
+            Assert.AreEqual("Renegade", service.GetMovieDetails(0).title);
         }
 
     }

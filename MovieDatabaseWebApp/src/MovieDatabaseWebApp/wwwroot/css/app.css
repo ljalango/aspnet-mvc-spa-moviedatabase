@@ -3471,6 +3471,9 @@ body {
 .app-header-row {
   background-color: #ffffff; }
 
+.autocomplete-list {
+  background-color: #b5b57c; }
+
 h1 {
   font-size: 1.99998em;
   margin-left: 26px;

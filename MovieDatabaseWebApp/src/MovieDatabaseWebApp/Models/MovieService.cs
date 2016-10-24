@@ -8,7 +8,7 @@ namespace MovieDatabaseWebApp.Models
     public interface IMovieService
     {
         MovieList GetMovies();
-        object GetMovieDetails(int movieId);
+        MovieDetails GetMovieDetails(int movieId);
         List<Category> GetGenres();
     }
 
@@ -29,13 +29,18 @@ namespace MovieDatabaseWebApp.Models
             return this.movieRepository.AllMovies();
         }
 
-        public object GetMovieDetails(int movieId)
+        public MovieDetails GetMovieDetails(int movieId)
         {
-            //return from movie repository by id
-            var queryResult = from item in this.movieRepository.AllMovies()
-                        where item.ID == movieId
-                        select item;
-            return queryResult.Single();
+            //return movie details from movie repository by id
+            Movie movie = this.movieRepository.GetMovieById(movieId);
+
+            MovieDetails details = new MovieDetails();
+            details.title = movie.Title;
+            details.year = movie.Year;
+            details.rating = movie.Rating;
+            details.description = movie.Description;
+
+            return details;
         }
 
         public List<Category> GetGenres()
